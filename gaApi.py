@@ -90,5 +90,4 @@ def get_user():
 
     return {"user_id": user_id, "user_name": user_name, "user_full_name": user_full_name, "user_email": user_email, "user_image": user_image}
 
-#run(host='192.168.0.105', port=8080, debug=True)
-run(host='172.16.0.114', port=8080, debug=True)
+run(host='localhost', port=8080, debug=True)
