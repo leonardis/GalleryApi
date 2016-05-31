@@ -1,0 +1,24 @@
+Route: /get/photos
+Description: receive a user id and return it following users photos
+Data-In: {"user_id": id}
+Data-Out: {photos: [{user_name: "mlugo",likes: 0,user_id: 3,image_description: "Sun",image_uri: "https://static.pexels.com/photos/6925/sunset-silhouette-jump-aundre-larrow-large.jpg"}]}
+
+Route: /get/users
+Description: Receive a user id and return it following users
+Data-In: {"user_id": id}
+Data-Out: {users: [{user_name: "mlugo",user_id: 3}]}
+
+Route: /get/user
+Description: receive a user id and return all information
+Data-In: {"user_id": id}
+Data-Out: {user_name: "Rojas_leo",user_id: 1,user_full_name: "Leonardis Rojas",user_email: "leonardisrojas@gmail.com",user_image: "https://static.pexels.com/photos/6925/sunset-silhouette-jump-aundre-larrow-large.jpg"}
+
+Route: /post/photo
+Description: Receive a user id and Post a new photo
+Data-In: {"user_id": id, "photo": ""}
+Data-Out: {"data":error or success, List of images}
+
+Route: /post/user_data
+Description: Receive a user information to add or update
+Data-In: {user_name: "Rojas_leo",user_id: 1,user_full_name: "Leonardis Rojas",user_email: "leonardisrojas@gmail.com",user_image: "https://static.pexels.com/photos/6925/sunset-silhouette-jump-aundre-larrow-large.jpg"}
+Data-Out: {"data":error or success}
